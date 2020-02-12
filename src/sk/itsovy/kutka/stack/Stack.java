@@ -39,7 +39,7 @@ public class Stack<T> {
         if (isEmpty()) {
             throw new StackUnderflowException("Na! Podceklo si.");
         } else {
-            list.remove(size-1);
+            list.remove(size - 1);
             size--;
         }
     }
@@ -61,6 +61,11 @@ public class Stack<T> {
 
     public void empty(){
         list.clear();
-        size = 0;
+    }
+    public void printStack() {
+        for (T t:list) {
+            System.out.print(t + ", ");
+
+        }
     }
 }
